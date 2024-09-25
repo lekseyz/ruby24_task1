@@ -10,7 +10,7 @@ names = {}
 count = 0
 
 
-t1 = Time.now
+start = Time.now
 File.open("A:/Prog_s/Ruby/ruby24_task1/data/log.txt", "r") do |file|
   file.each_line do |line|
     name = line[line.index('>')+1...line.length-1]
@@ -38,6 +38,6 @@ end
 names.each do |name,count|
   puts "#{count} #{name}"
 end
-t2 = Time.now
+stop = Time.now
 
-puts "Время работы программы: "+(t2-t1).to_s+" cек"
+puts "Время работы: #{(stop-start).to_s} cек"
